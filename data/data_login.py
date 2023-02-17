@@ -1,8 +1,12 @@
 # 登录参数
 class DataLogin:
+    # 账号
     username = 'wmadmin'
+    # 密码
     password = ('123456', '1234')
+    # 断言比较url
     expect = 'http://47.92.237.67/materialsconsume/#/index'
+    # 错误截图名称
     errorname = 'login'
 
     # # 账号
