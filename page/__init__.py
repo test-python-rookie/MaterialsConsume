@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 # url
-url = r'http://192.168.250.202:9999/'
+url = r'http://47.92.237.67/materialsconsume/#/login'
 
 # 用户名
 # username = By.XPATH, '//*[@id="app"]/div/div[2]/div/form/div[1]/div/div[1]/input'
@@ -68,6 +68,6 @@ an_ok = 1
 an_ook = 3
 
 # 获取断言
-hqdy = By.CLASS_NAME, 'home-exam-name'
+hqdy = By.CLASS_NAME, 'no-redirect'
 hqdy_num = 0
 

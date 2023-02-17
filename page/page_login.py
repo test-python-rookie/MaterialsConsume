@@ -27,8 +27,8 @@ class PageLogin(Base):
         return self.base_get_url()
 
     # 截图
-    def page_login_errorview(self):
-        self.base_get_image()
+    def page_login_errorview(self, errorname):
+        self.base_get_image(errorname)
 
     # 组装业务方法
     def page_login(self, username, password):
