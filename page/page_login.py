@@ -1,5 +1,6 @@
 import page
 from base.base import Base
+from time import sleep
 
 
 class PageLogin(Base):
@@ -12,6 +13,7 @@ class PageLogin(Base):
 
     # 点击登录
     def page_login_btn(self):
+        sleep(1)
         self.base_click(page.login)
 
     # # 获取异常信息
@@ -27,8 +29,8 @@ class PageLogin(Base):
         return self.base_get_url()
 
     # 截图
-    def page_login_errorview(self, errorname):
-        self.base_get_image(errorname)
+    def page_login_assertionview(self, assertionname):
+        self.base_get_image(assertionname)
 
     # 组装业务方法
     def page_login(self, username, password):

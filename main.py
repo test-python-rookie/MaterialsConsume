@@ -1,16 +1,14 @@
-# This is a sample Python script.
-
-# Press Shift+F10 to execute it or replace it with your code.
-# Press Double Shift to search everywhere for classes, files, tool windows, actions, and settings.
-
-
-def print_hi(name):
-    # Use a breakpoint in the code line below to debug your script.
-    print(f'Hi, {name}')  # Press Ctrl+F8 to toggle the breakpoint.
-
-
-# Press the green button in the gutter to run the script.
+import unittest
 if __name__ == '__main__':
-    print_hi('PyCharm')
+    case_path1 = unittest.defaultTestLoader.discover('./scripts', pattern="test_login.py")
+    case_path2 = unittest.defaultTestLoader.discover('./scripts', pattern="test_inhouse.py")
+    # 创建套件
+    suit = unittest.TestSuite()
+    # 添加套件用例
+    suit.addTest(case_path1)
+    suit.addTest(case_path2)
+    run = unittest.TextTestRunner()
+    run.run(suit)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+
+
