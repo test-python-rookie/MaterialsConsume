@@ -47,20 +47,18 @@ pull_down1_num = 6
 pull_down2 = By.CLASS_NAME, 'el-select-dropdown__item'
 pull_down2_num = 1
 
-# 选择物品
-articles1 = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
-articles1_num = 12
+# 选择入库物品
+inhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+inhouse_articles_num = 12
 
-articles2 = By.CLASS_NAME, 'el-table__row'
-articles2_num = 33
 
-# 输入数量
-quantity = By.CLASS_NAME, 'normal-padding'
-quantity_num = 0
+# 输入入库数量
+inhouse_quantity = By.CLASS_NAME, 'normal-padding'
+inhouse_quantity_num = 0
 
 # 输入有效期
-today = By.CLASS_NAME, 'normal-padding'
-today_num = 7
+inhouse_today = By.CLASS_NAME, 'normal-padding'
+inhouse_today_num = 7
 
 # 新增入库单确认按钮
 inhouse_confirm1 = By.CLASS_NAME, 'el-button--medium'
@@ -87,3 +85,44 @@ text1_num = 0
 text2 = By.CLASS_NAME, 'el-tooltip'
 text2_num = 0
 
+# 请领管理
+request = By.CLASS_NAME, 'el-menu-item'
+request_num = 6
+
+# 新增请领单按钮
+create_request = By.CLASS_NAME, 'el-button--medium'
+create_request_num = 2
+
+# 选择请领物品
+request_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+request_articles_num = 2
+
+
+# 输入请领数量
+request_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+request_quantity_num = 3
+
+# 新增请领单确认按钮
+request_confirm1 = By.CLASS_NAME, 'el-button--medium'
+request_confirm1_num = 6
+
+request_confirm2 = By.CLASS_NAME, 'el-message-box'
+request_confirm2_num = 1
+
+request_confirm3 = By.CLASS_NAME, 'el-button--primary'
+request_confirm3_num = 0
+
+# 新增请领单保存按钮
+request_save = By.CLASS_NAME, 'el-button--medium'
+request_save_num = 7
+
+# 新增请领单取消按钮
+request_cancel = By.CLASS_NAME, 'el-button--medium'
+request_cancel_num = 8
+
+# 请领管理列表最新一条数据的录入时间
+request_text1 = By.CLASS_NAME, 'el-table__row'
+request_text1_num = 0
+
+request_text2 = By.CLASS_NAME, 'el-tooltip'
+request_text2_num = 0

@@ -10,11 +10,13 @@ if __name__ == '__main__':
         # print(file_name)
     case_login = unittest.defaultTestLoader.discover('./scripts', pattern="test_login.py")
     case_inhouse = unittest.defaultTestLoader.discover('./scripts', pattern="test_inhouse.py")
+    case_request = unittest.defaultTestLoader.discover('./scripts', pattern="test_request.py")
     # 创建套件
     suit = unittest.TestSuite()
     # 添加套件用例
     suit.addTest(case_login)
-    # suit.addTest(case_inhouse)
+    suit.addTest(case_inhouse)
+    suit.addTest(case_request)
     run = unittest.TextTestRunner()
     run.run(suit)
 

@@ -18,9 +18,9 @@ class TestInhouse(unittest.TestCase):
         self.inhouse = PageInhouse(GetDriver().get_driver())
 
     # 结束方法
-    def tearDown(self):
-        # 关闭浏览器
-        GetDriver().quit_driver()
+    # def tearDown(self):
+    #     # 关闭浏览器
+    #     GetDriver().quit_driver()
 
     # 新建测试方法
     @parameterized.expand(get_data())

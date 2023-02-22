@@ -17,28 +17,28 @@ driver.find_elements(By.CLASS_NAME, 'el-input__inner')[0].send_keys('qltest')
 driver.find_elements(By.CLASS_NAME, 'el-input__inner')[1].send_keys('123456')
 sleep(1)
 driver.find_element(By.CLASS_NAME, 'el-button').click()
-sleep(2)
+sleep(3)
 # 入出库管理
 driver.find_elements(By.CLASS_NAME, 'el-submenu__title')[1].click()
 sleep(1)
-# 入库管理
-driver.find_elements(By.CLASS_NAME, 'el-menu-item')[3].click()
+# 请领管理
+driver.find_elements(By.CLASS_NAME, 'el-menu-item')[6].click()
 sleep(2)
-# 新增入库单
+# 新增请领单
 driver.find_elements(By.CLASS_NAME, 'el-button--medium')[2].click()
 sleep(2)
 # 选择业务类型
-driver.find_elements(By.CLASS_NAME, 'el-input__inner')[8].click()
-sleep(1)
-driver.find_elements(By.CLASS_NAME, 'el-select-dropdown__list')[6].find_elements(By.CLASS_NAME, 'el-select-dropdown__item')[2].click()
-sleep(2)
-# 选择往来单位
-driver.find_elements(By.CLASS_NAME, 'el-input__inner')[9].click()
-sleep(1)
-driver.find_elements(By.CLASS_NAME, 'el-select-dropdown__list')[6].find_elements(By.CLASS_NAME, 'el-select-dropdown__item')[1].click()
-sleep(2)
+# driver.find_elements(By.CLASS_NAME, 'el-input__inner')[9].click()
+# sleep(1)
+# driver.find_elements(By.CLASS_NAME, 'el-select-dropdown__list')[6].find_elements(By.CLASS_NAME, 'el-select-dropdown__item')[2].click()
+# sleep(2)
+# # 选择往来单位
+# driver.find_elements(By.CLASS_NAME, 'el-input__inner')[9].click()
+# sleep(1)
+# driver.find_elements(By.CLASS_NAME, 'el-select-dropdown__list')[6].find_elements(By.CLASS_NAME, 'el-select-dropdown__item')[1].click()
+# sleep(2)
 # 选择物品
-articles = driver.find_elements(By.CLASS_NAME, 'tbaleInputSkipToNextOne')[12]
+articles = driver.find_elements(By.CLASS_NAME, 'tbaleInputSkipToNextOne')[2]
 ActionChains(driver).double_click(articles).perform()
 sleep(1)
 driver.switch_to.active_element.send_keys('10005')
@@ -48,25 +48,19 @@ driver.switch_to.active_element.send_keys(Keys.ENTER)
 # driver.execute_script(js3)
 sleep(1)
 # 输入数量
-quantity = driver.find_elements(By.CLASS_NAME, 'normal-padding')[0]
-ActionChains(driver).double_click(quantity).perform()
+articles = driver.find_elements(By.CLASS_NAME, 'tbaleInputSkipToNextOne')[3]
+ActionChains(driver).double_click(articles).perform()
 sleep(1)
 driver.switch_to.active_element.send_keys('5')
 sleep(1)
-# 输入有效期
-# today = driver.find_elements(By.CLASS_NAME, 'normal-padding')[7]
-# ActionChains(driver).double_click(today).perform()
-# sleep(1)
-# driver.switch_to.active_element.send_keys(time.strftime('%Y-%m-%d'))
-# sleep(1)
-# 新增入库单保存
-driver.find_elements(By.CLASS_NAME, 'el-button--medium')[7].click()
+# 新增请领单保存
+driver.find_elements(By.CLASS_NAME, 'el-button--medium')[5].click()
 save_time = time.strftime('%Y-%m-%d %H:%M')
 sleep(2)
 # 新增入库单确认
-# driver.find_elements(By.CLASS_NAME, 'el-button--medium')[6].click()
+# driver.find_elements(By.CLASS_NAME, 'el-button--medium')[4].click()
 # sleep(1)
-# driver.find_elements(By.CLASS_NAME, 'el-message-box')[0].find_elements(By.CLASS_NAME, 'el-button--primary')[0].click()
+# driver.find_elements(By.CLASS_NAME, 'el-message-box')[1].find_elements(By.CLASS_NAME, 'el-button--primary')[0].click()
 # sleep(5)
 # 获取最新的录入时间
 text = driver.find_elements(By.CLASS_NAME, 'el-table__row')[0].find_elements(By.CLASS_NAME, 'el-tooltip')[0].text

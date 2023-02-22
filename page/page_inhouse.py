@@ -21,9 +21,8 @@ class PageInhouse(Base):
     def page_login_btn(self):
         self.base_click(page.login)
 
-    # 打开入库管理页面
-    def page_open_inhouse(self):
-        # 点击入出库管理
+    # 打开入出库管理
+    def page_open_inhouse_outhouse(self):
         self.base_click(page.inhouse_outhouse, page.inhouse_outhouse_num)
 
     # 点击新增入库单
@@ -45,31 +44,31 @@ class PageInhouse(Base):
         sleep(1)
         self.base_finds_click(page.pull_down1, page.pull_down1_num, page.pull_down2, page.pull_down2_num)
         # 物品
-        articles = self.base_find_elements(page.articles1)[page.articles1_num]
+        articles = self.base_find_elements(page.inhouse_articles)[page.inhouse_articles_num]
         self.base_double_click(articles)
         sleep(1)
         self.base_active_input(wpmc)
         self.base_active_input('Keys.ENTER')
         # 数量
-        quantity = self.base_find_elements(page.quantity)[page.quantity_num]
+        quantity = self.base_find_elements(page.inhouse_quantity)[page.inhouse_quantity_num]
         self.base_double_click(quantity)
         sleep(1)
         self.base_active_input(rksl)
         sleep(1)
         # 有效期
-        today = self.base_find_elements(page.today)[page.today_num]
+        today = self.base_find_elements(page.inhouse_today)[page.inhouse_today_num]
         self.base_double_click(today)
         self.base_active_input(time.strftime('%Y-%m-%d'))
         sleep(1)
         self.save_time = time.strftime('%Y-%m-%d %H:%M')
         # 入库单确认
-        self.base_click(page.inhouse_confirm1, page.inhouse_confirm1_num)
-        sleep(1)
-        self.base_finds_click(page.inhouse_confirm2, page.inhouse_confirm2_num, page.inhouse_confirm3, page.inhouse_confirm3_num)
+        # self.base_click(page.inhouse_confirm1, page.inhouse_confirm1_num)
+        # sleep(1)
+        # self.base_finds_click(page.inhouse_confirm2, page.inhouse_confirm2_num, page.inhouse_confirm3, page.inhouse_confirm3_num)
         # 入库单保存
         # self.base_click(page.inhouse_save, page.inhouse_save_num)
         # 入库单取消
-        # self.base_click(page.inhouse_cancel, page.inhouse_cancel_num)
+        self.base_click(page.inhouse_cancel, page.inhouse_cancel_num)
         return self.save_time
 
     # 获取断言
@@ -86,7 +85,7 @@ class PageInhouse(Base):
         # sleep(1)
         # self.page_login_btn()
         sleep(3)
-        self.page_open_inhouse()
+        self.page_open_inhouse_outhouse()
         sleep(1)
         self.page_inhouse_create()
         sleep(1)
