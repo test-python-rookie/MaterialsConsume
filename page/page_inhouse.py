@@ -61,12 +61,15 @@ class PageInhouse(Base):
         self.base_double_click(today)
         self.base_active_input(time.strftime('%Y-%m-%d'))
         sleep(1)
-        # 入库单保存
-        self.base_click(page.inhouse_save, page.inhouse_save_num)
         self.save_time = time.strftime('%Y-%m-%d %H:%M')
         # 入库单确认
-        # self.base_click(page.inhouse_confirm1, page.inhouse_confirm1_num)
-        # self.base_finds_click(page.inhouse_confirm2, page.inhouse_confirm2_num, page.inhouse_confirm3, page.inhouse_confirm3_num)
+        self.base_click(page.inhouse_confirm1, page.inhouse_confirm1_num)
+        sleep(1)
+        self.base_finds_click(page.inhouse_confirm2, page.inhouse_confirm2_num, page.inhouse_confirm3, page.inhouse_confirm3_num)
+        # 入库单保存
+        # self.base_click(page.inhouse_save, page.inhouse_save_num)
+        # 入库单取消
+        # self.base_click(page.inhouse_cancel, page.inhouse_cancel_num)
         return self.save_time
 
     # 获取断言

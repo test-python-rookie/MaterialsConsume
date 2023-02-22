@@ -62,10 +62,6 @@ quantity_num = 0
 today = By.CLASS_NAME, 'normal-padding'
 today_num = 7
 
-# 新增入库单保存按钮
-inhouse_save = By.CLASS_NAME, 'el-button--medium'
-inhouse_save_num = 7
-
 # 新增入库单确认按钮
 inhouse_confirm1 = By.CLASS_NAME, 'el-button--medium'
 inhouse_confirm1_num = 6
@@ -75,6 +71,14 @@ inhouse_confirm2_num = 0
 
 inhouse_confirm3 = By.CLASS_NAME, 'el-button--primary'
 inhouse_confirm3_num = 0
+
+# 新增入库单保存按钮
+inhouse_save = By.CLASS_NAME, 'el-button--medium'
+inhouse_save_num = 7
+
+# 新增入库单取消按钮
+inhouse_cancel = By.CLASS_NAME, 'el-button--medium'
+inhouse_cancel_num = 8
 
 # 入库管理列表最新一条数据的录入时间
 text1 = By.CLASS_NAME, 'el-table__row'

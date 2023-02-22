@@ -75,5 +75,5 @@ class Base:
 
     # 截图方法
     def base_get_image(self, path, assertionname):
-        print(path)
+        # print(path)
         self.driver.get_screenshot_as_file('{}/{}_{}.png'.format(path, assertionname, time.strftime('%Y%m%d%H%M%S')))
