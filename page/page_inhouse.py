@@ -74,8 +74,8 @@ class PageInhouse(Base):
         return self.base_finds_text(page.text1, page.text1_num, page.text2, page.text2_num)
 
     # 截图
-    def page_inhouse_assertionview(self, assertionname):
-        self.base_get_image(assertionname)
+    def page_inhouse_assertionview(self, path, assertionname):
+        self.base_get_image(path, assertionname)
 
     # 组装业务方法
     def page_inhouse(self, wpmc, rksl):

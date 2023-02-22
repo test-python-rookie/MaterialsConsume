@@ -2,6 +2,7 @@ import time
 import unittest
 from parameterized import parameterized
 from base.get_driver import GetDriver
+import data
 from data.data_inhouse import DataInhouse
 from page.page_inhouse import PageInhouse
 from time import sleep
@@ -33,8 +34,11 @@ class TestInhouse(unittest.TestCase):
         t_time = time.mktime(time.strptime(text_time, '%Y-%m-%d %H:%M'))
         try:
             self.assertTrue(t_time >= s_time)
-            self.inhouse.page_inhouse_assertionview(DataInhouse().successname)
+            self.inhouse.page_inhouse_assertionview(data.join_path, DataInhouse().successname)
             print('新增入库单成功！！！')
         except AssertionError:
-            self.inhouse.page_inhouse_assertionview(DataInhouse().errorname)
+            self.inhouse.page_inhouse_assertionview(data.join_path, DataInhouse().errorname)
             print('新增入库单失败！！！')
+
+    if __name__ == '__main__':
+        unittest.main()

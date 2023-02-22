@@ -74,6 +74,6 @@ class Base:
         return self.driver.current_url
 
     # 截图方法
-    def base_get_image(self, errorname):
-        print(errorname)
-        self.driver.get_screenshot_as_file('../image/{}_{}.png'.format(errorname, time.strftime('%Y%m%d%H%M%S')))
+    def base_get_image(self, path, assertionname):
+        print(path)
+        self.driver.get_screenshot_as_file('{}/{}_{}.png'.format(path, assertionname, time.strftime('%Y%m%d%H%M%S')))

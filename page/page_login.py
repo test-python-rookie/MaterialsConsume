@@ -29,8 +29,8 @@ class PageLogin(Base):
         return self.base_get_url()
 
     # 截图
-    def page_login_assertionview(self, assertionname):
-        self.base_get_image(assertionname)
+    def page_login_assertionview(self,path,  assertionname):
+        self.base_get_image(path, assertionname)
 
     # 组装业务方法
     def page_login(self, username, password):

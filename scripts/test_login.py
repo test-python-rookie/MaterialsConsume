@@ -3,6 +3,7 @@ from parameterized import parameterized
 from page.page_login import PageLogin
 from time import sleep
 from base.get_driver import GetDriver
+import data
 from data.data_login import DataLogin
 
 def get_data():
@@ -30,10 +31,13 @@ class TestLogin(unittest.TestCase):
         msg = self.login.page_login_assert()
         try:
             self.assertEqual(msg, expect)
-            self.login.page_login_assertionview(DataLogin().successname)
+            self.login.page_login_assertionview(data.join_path, DataLogin().successname)
             print('登录成功！！！')
-            # print('url地址为：', msg)
+            # print('url地址为：', DataLogin().successname)
         except AssertionError:
-            self.login.page_login_assertionview(DataLogin().errorname)
+            self.login.page_login_assertionview(data.join_path, DataLogin().errorname)
             print('登录失败！！！')
             # print('url地址为：', msg)
+
+    if __name__ == '__main__':
+        unittest.main()
