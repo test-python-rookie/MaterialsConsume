@@ -14,11 +14,9 @@ pwd_num = 1
 # 登录按钮
 login = By.CLASS_NAME, 'el-button'
 
-# # 异常信息
-# error = By.CLASS_NAME, 'login-box-title'
-
-# # 通过信息
-# succeed = By.CLASS_NAME, 'login-box2'
+# 首页
+login_text = By.CLASS_NAME, 'no-redirect'
+login_text_num = 0
 
 # 入出库管理
 inhouse_outhouse = By.CLASS_NAME, 'el-submenu__title'
@@ -79,11 +77,11 @@ inhouse_cancel = By.CLASS_NAME, 'el-button--medium'
 inhouse_cancel_num = 8
 
 # 入库管理列表最新一条数据的录入时间
-text1 = By.CLASS_NAME, 'el-table__row'
-text1_num = 0
+inhouse_text1 = By.CLASS_NAME, 'el-table__row'
+inhouse_text1_num = 0
 
-text2 = By.CLASS_NAME, 'el-tooltip'
-text2_num = 0
+inhouse_text2 = By.CLASS_NAME, 'el-tooltip'
+inhouse_text2_num = 0
 
 # 请领管理
 request = By.CLASS_NAME, 'el-menu-item'

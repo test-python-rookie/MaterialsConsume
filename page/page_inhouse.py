@@ -73,7 +73,7 @@ class PageInhouse(Base):
 
     # 获取断言
     def page_inhouse_pass(self):
-        return self.base_finds_text(page.text1, page.text1_num, page.text2, page.text2_num)
+        return self.base_finds_text(page.inhouse_text1, page.inhouse_text1_num, page.inhouse_text2, page.inhouse_text2_num)
 
     # 截图
     def page_inhouse_assertionview(self, path, assertionname):

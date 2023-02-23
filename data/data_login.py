@@ -4,8 +4,8 @@ class DataLogin:
     username = 'qltest'
     # 密码
     password = ('123456', '1234')
-    # 断言比较url
-    expect = 'http://47.92.237.67/materialsconsume/#/index'
+    # 断言比较
+    expect = '首页'
     # 错误截图名称
     successname = 'login_success'
     # 错误截图名称

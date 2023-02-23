@@ -26,7 +26,7 @@ class PageLogin(Base):
 
     # 获取断言信息
     def page_login_assert(self):
-        return self.base_get_url()
+        return self.base_get_text(page.login_text, page.login_text_num)
 
     # 截图
     def page_login_assertionview(self,path,  assertionname):

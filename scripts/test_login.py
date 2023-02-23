@@ -27,7 +27,7 @@ class TestLogin(unittest.TestCase):
         # 调用测试登录方法
         self.login.page_login(username, password)
         sleep(2)
-        # 调用测试登录后的url信息
+        # 获取断言
         msg = self.login.page_login_assert()
         try:
             self.assertEqual(msg, expect)

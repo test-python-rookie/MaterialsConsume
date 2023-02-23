@@ -60,7 +60,7 @@ class PageRequest(Base):
 
     # 获取断言
     def page_request_pass(self):
-        return self.base_finds_text(page.text1, page.text1_num, page.text2, page.text2_num)
+        return self.base_finds_text(page.request_text1, page.request_text1_num, page.request_text2, page.request_text2_num)
 
     # 截图
     def page_request_assertionview(self, path, assertionname):
@@ -75,6 +75,6 @@ class PageRequest(Base):
         # self.page_open_inhouse_outhouse()
         # sleep(1)
         self.page_request_create()
-        sleep(1)
+        sleep(2)
         self.save_time = self.page_request_data(wpmc, qlsl)
         return self.save_time

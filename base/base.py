@@ -69,7 +69,7 @@ class Base:
             el = self.base_active_element()
             el.send_keys(*value)
 
-    # 获取当前页面url，用于登录断言
+    # 获取当前页面url
     def base_get_url(self):
         return self.driver.current_url
 
