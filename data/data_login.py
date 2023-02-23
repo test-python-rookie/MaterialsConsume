@@ -7,9 +7,9 @@ class DataLogin:
     # 断言比较
     expect = '首页'
     # 错误截图名称
-    successname = 'login_success'
+    successname = '01_login_success'
     # 错误截图名称
-    errorname = 'login_error'
+    errorname = '01_login_error'
 
     # # 账号
     # def login_username(self):

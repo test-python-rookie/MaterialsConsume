@@ -5,6 +5,6 @@ class DataInhouse:
     # 入库数量
     rksl = '5'
     # 成功截图名称
-    successname = 'inhouse_success'
+    successname = '02_inhouse_success'
     # 失败截图名称
-    errorname = 'inhouse_error'
+    errorname = '02_inhouse_error'

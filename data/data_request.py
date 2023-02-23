@@ -5,6 +5,6 @@ class DataRequest:
     # 请领数量
     qlsl = '5'
     # 成功截图名称
-    successname = 'request_success'
+    successname = '03_request_success'
     # 失败截图名称
-    errorname = 'request_error'
+    errorname = '03_request_error'
