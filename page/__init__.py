@@ -105,7 +105,7 @@ request_confirm1 = By.CLASS_NAME, 'el-button--medium'
 request_confirm1_num = 6
 
 request_confirm2 = By.CLASS_NAME, 'el-message-box'
-request_confirm2_num = 1
+request_confirm2_num = 0
 
 request_confirm3 = By.CLASS_NAME, 'el-button--primary'
 request_confirm3_num = 0
@@ -124,3 +124,77 @@ request_text1_num = 0
 
 request_text2 = By.CLASS_NAME, 'el-tooltip'
 request_text2_num = 0
+
+# 申领管理
+agree = By.CLASS_NAME, 'el-menu-item'
+agree_num = 5
+
+# 修改申领单按钮
+modify_agree = By.CLASS_NAME, 'el-button--mini'
+modify_agree_num = 0
+
+# 输入请领数量
+agree_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+agree_quantity_num = 1
+
+# 申领单确认按钮
+agree_confirm1 = By.CLASS_NAME, 'el-button--medium'
+agree_confirm1_num = 5
+
+agree_confirm2 = By.CLASS_NAME, 'el-message-box'
+agree_confirm2_num = 0
+
+agree_confirm3 = By.CLASS_NAME, 'el-button--primary'
+agree_confirm3_num = 0
+
+# 申领单保存按钮
+agree_save = By.CLASS_NAME, 'el-button--medium'
+agree_save_num = 6
+
+# 申领单取消按钮
+agree_cancel = By.CLASS_NAME, 'el-button--medium'
+agree_cancel_num = 7
+
+# 申领单返回主表
+agree_master = By.CLASS_NAME, 'el-tabs__item'
+agree_master_num = 0
+
+# 申领管理列表最新一条数据的审核时间
+agree_text1 = By.CLASS_NAME, 'el-table__row'
+agree_text1_num = 0
+
+agree_text2 = By.CLASS_NAME, 'el-tooltip'
+agree_text2_num = 7
+
+# 出库管理
+outhouse = By.CLASS_NAME, 'el-menu-item'
+outhouse_num = 4
+
+# 修改出库单按钮
+modify_outhouse = By.CLASS_NAME, 'el-button--mini'
+modify_outhouse_num = 0
+
+# 出库单确认按钮
+outhouse_confirm1 = By.CLASS_NAME, 'el-button--medium'
+outhouse_confirm1_num = 6
+
+outhouse_confirm2 = By.CLASS_NAME, 'el-message-box'
+outhouse_confirm2_num = 0
+
+outhouse_confirm3 = By.CLASS_NAME, 'el-button--primary'
+outhouse_confirm3_num = 0
+
+# 出库单保存按钮
+outhouse_save = By.CLASS_NAME, 'el-button--medium'
+outhouse_save_num = 7
+
+# 申领单取消按钮
+outhouse_cancel = By.CLASS_NAME, 'el-button--medium'
+outhouse_cancel_num = 8
+
+# 出库管理列表最新一条数据的确认时间
+outhouse_text1 = By.CLASS_NAME, 'el-table__row'
+outhouse_text1_num = 0
+
+outhouse_text2 = By.CLASS_NAME, 'el-tooltip'
+outhouse_text2_num = 8

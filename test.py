@@ -21,11 +21,11 @@ sleep(3)
 # 入出库管理
 driver.find_elements(By.CLASS_NAME, 'el-submenu__title')[1].click()
 sleep(1)
-# 请领管理
-driver.find_elements(By.CLASS_NAME, 'el-menu-item')[6].click()
+# 出库管理
+driver.find_elements(By.CLASS_NAME, 'el-menu-item')[4].click()
 sleep(2)
-# 新增请领单
-driver.find_elements(By.CLASS_NAME, 'el-button--medium')[2].click()
+# 修改申领单
+driver.find_elements(By.CLASS_NAME, 'el-button--mini')[0].click()
 sleep(2)
 # 选择业务类型
 # driver.find_elements(By.CLASS_NAME, 'el-input__inner')[9].click()
@@ -38,23 +38,23 @@ sleep(2)
 # driver.find_elements(By.CLASS_NAME, 'el-select-dropdown__list')[6].find_elements(By.CLASS_NAME, 'el-select-dropdown__item')[1].click()
 # sleep(2)
 # 选择物品
-articles = driver.find_elements(By.CLASS_NAME, 'tbaleInputSkipToNextOne')[2]
-ActionChains(driver).double_click(articles).perform()
-sleep(1)
-driver.switch_to.active_element.send_keys('10005')
-driver.switch_to.active_element.send_keys(Keys.ENTER)
+# articles = driver.find_elements(By.CLASS_NAME, 'tbaleInputSkipToNextOne')[2]
+# ActionChains(driver).double_click(articles).perform()
+# sleep(1)
+# driver.switch_to.active_element.send_keys('10005')
+# driver.switch_to.active_element.send_keys(Keys.ENTER)
 # driver.find_elements(By.CLASS_NAME, 'el-table__row')[33].click()
 # js3 = "document.getElementsByClassName('el-table__row')[33].click()"
 # driver.execute_script(js3)
-sleep(1)
+# sleep(1)
 # 输入数量
-articles = driver.find_elements(By.CLASS_NAME, 'tbaleInputSkipToNextOne')[3]
-ActionChains(driver).double_click(articles).perform()
-sleep(1)
-driver.switch_to.active_element.send_keys('5')
-sleep(1)
-# 新增请领单保存
-driver.find_elements(By.CLASS_NAME, 'el-button--medium')[5].click()
+# articles = driver.find_elements(By.CLASS_NAME, 'tbaleInputSkipToNextOne')[1]
+# ActionChains(driver).double_click(articles).perform()
+# sleep(1)
+# driver.switch_to.active_element.send_keys('5')
+# sleep(1)
+# 修改出库单保存
+driver.find_elements(By.CLASS_NAME, 'el-button--medium')[7].click()
 save_time = time.strftime('%Y-%m-%d %H:%M')
 sleep(2)
 # 新增入库单确认
@@ -62,15 +62,21 @@ sleep(2)
 # sleep(1)
 # driver.find_elements(By.CLASS_NAME, 'el-message-box')[1].find_elements(By.CLASS_NAME, 'el-button--primary')[0].click()
 # sleep(5)
+# 返回主表
+# driver.find_elements(By.CLASS_NAME, 'el-tabs__item')[0].click()
+# sleep(1)
 # 获取最新的录入时间
-text = driver.find_elements(By.CLASS_NAME, 'el-table__row')[0].find_elements(By.CLASS_NAME, 'el-tooltip')[0].text
+text = driver.find_elements(By.CLASS_NAME, 'el-table__row')[0].find_elements(By.CLASS_NAME, 'el-tooltip')[8].text
 s_time = time.mktime(time.strptime(save_time, '%Y-%m-%d %H:%M'))
-t_time = time.mktime(time.strptime(text, '%Y-%m-%d %H:%M'))
 
-if t_time >= s_time:
-    print('新增成功！')
-else:
+if text == '':
     print('失败')
+else:
+    t_time = time.mktime(time.strptime(text, '%Y-%m-%d %H:%M'))
+    if t_time >= s_time:
+        print('新增成功！')
+    else:
+        print('失败')
 
 
 

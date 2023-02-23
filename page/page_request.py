@@ -49,13 +49,13 @@ class PageRequest(Base):
         sleep(1)
         self.save_time = time.strftime('%Y-%m-%d %H:%M')
         # 请领单确认
-        # self.base_click(page.request_confirm1, page.request_confirm1_num)
-        # sleep(1)
-        # self.base_finds_click(page.request_confirm2, page.request_confirm2_num, page.request_confirm3, page.request_confirm3_num)
+        self.base_click(page.request_confirm1, page.request_confirm1_num)
+        sleep(2)
+        self.base_finds_click(page.request_confirm2, page.request_confirm2_num, page.request_confirm3, page.request_confirm3_num)
         # 请领单保存
         # self.base_click(page.request_save, page.request_save_num)
         # 请领单取消
-        self.base_click(page.request_cancel, page.request_cancel_num)
+        # self.base_click(page.request_cancel, page.request_cancel_num)
         return self.save_time
 
     # 获取断言

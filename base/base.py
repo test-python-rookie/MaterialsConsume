@@ -67,6 +67,7 @@ class Base:
             el.send_keys(Keys.ENTER)
         else:
             el = self.base_active_element()
+            el.clear()
             el.send_keys(*value)
 
     # 获取当前页面url
