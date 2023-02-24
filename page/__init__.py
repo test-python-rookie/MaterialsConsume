@@ -170,6 +170,39 @@ agree_text2_num = 7
 outhouse = By.CLASS_NAME, 'el-menu-item'
 outhouse_num = 4
 
+# 新增入库单按钮
+create_outhouse = By.CLASS_NAME, 'el-button--medium'
+create_outhouse_num = 2
+
+# 选择业务类型
+outhouse_business_type1 = By.CLASS_NAME, 'el-dialog__body'
+outhouse_business_type1_num = 0
+
+outhouse_business_type2 = By.CLASS_NAME, 'el-input__inner'
+outhouse_business_type2_num = 0
+
+# 选择往来单位
+outhouse_ealing_unit1 = By.CLASS_NAME, 'el-dialog__body'
+outhouse_ealing_unit1_num = 0
+
+outhouse_ealing_unit2 = By.CLASS_NAME, 'el-input__inner'
+outhouse_ealing_unit2_num = 1
+
+# 业务类型和往来单位下拉选项
+outhouse_pull_down1 = By.CLASS_NAME, 'el-select-dropdown__list'
+outhouse_pull_down1_num = 7
+
+outhouse_pull_down2 = By.CLASS_NAME, 'el-select-dropdown__item'
+outhouse_pull_down2_num = 1
+
+# 选择入库物品
+outhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+outhouse_articles_num = 2
+
+# 输入入库数量
+outhouse_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+outhouse_quantity_num = 3
+
 # 修改出库单按钮
 modify_outhouse = By.CLASS_NAME, 'el-button--mini'
 modify_outhouse_num = 0
@@ -188,7 +221,7 @@ outhouse_confirm3_num = 0
 outhouse_save = By.CLASS_NAME, 'el-button--medium'
 outhouse_save_num = 7
 
-# 申领单取消按钮
+# 出库单取消按钮
 outhouse_cancel = By.CLASS_NAME, 'el-button--medium'
 outhouse_cancel_num = 8
 
