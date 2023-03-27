@@ -1,7 +1,7 @@
 from selenium.webdriver.common.by import By
 
 # url
-url = r'http://47.92.237.67/materialsconsume/#/login'
+url = r'http://39.98.72.93/materialsconsume/#/login'
 
 # 用户名
 username = By.CLASS_NAME, 'el-input__inner'
