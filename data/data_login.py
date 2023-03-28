@@ -9,7 +9,7 @@ class DataLogin:
     # 错误截图名称
     successname = '01_login_success'
     # 错误截图名称
-    errorname = '01_login_error'
+    errorname = '01_login_Fail'
 
     # # 账号
     # def login_username(self):

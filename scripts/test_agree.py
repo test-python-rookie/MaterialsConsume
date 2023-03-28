@@ -41,9 +41,10 @@ class TestAgree(unittest.TestCase):
             except AssertionError:
                 self.agree.page_agree_assertionview(data.join_path, DataAgree().errorname)
                 print('审核申领单失败！！！')
-        except AssertionError:
+        except AssertionError as e:
             self.agree.page_agree_assertionview(data.join_path, DataAgree().errorname)
             print('审核申领单失败！！！')
+            raise AssertionError(e)
 
     if __name__ == '__main__':
         unittest.main()

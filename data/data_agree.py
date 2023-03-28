@@ -5,4 +5,4 @@ class DataAgree:
     # 成功截图名称
     successname = '04_agree_success'
     # 失败截图名称
-    errorname = '04_agree_error'
+    errorname = '04_agree_Fail'

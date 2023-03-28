@@ -36,9 +36,10 @@ class TestInhouse(unittest.TestCase):
             self.assertTrue(t_time >= s_time)
             self.inhouse.page_inhouse_assertionview(data.join_path, DataInhouse().successname)
             print('新增入库单成功！！！')
-        except AssertionError:
+        except AssertionError as e:
             self.inhouse.page_inhouse_assertionview(data.join_path, DataInhouse().errorname)
             print('新增入库单失败！！！')
+            raise AssertionError(e)
 
     if __name__ == '__main__':
         unittest.main()

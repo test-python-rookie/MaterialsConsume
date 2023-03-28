@@ -34,10 +34,11 @@ class TestLogin(unittest.TestCase):
             self.login.page_login_assertionview(data.join_path, DataLogin().successname)
             print('登录成功！！！')
             # print('url地址为：', DataLogin().successname)
-        except AssertionError:
+        except AssertionError as e:
             self.login.page_login_assertionview(data.join_path, DataLogin().errorname)
             print('登录失败！！！')
             # print('url地址为：', msg)
+            raise AssertionError(e)
 
     if __name__ == '__main__':
         unittest.main()
