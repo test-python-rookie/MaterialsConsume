@@ -7,4 +7,4 @@ class DataRequest:
     # 成功截图名称
     successname = '03_request_success'
     # 失败截图名称
-    errorname = '03_request_error'
+    errorname = '03_request_Fail'

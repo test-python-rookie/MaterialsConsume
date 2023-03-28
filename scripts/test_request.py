@@ -37,9 +37,10 @@ class TestRequest(unittest.TestCase):
             self.assertTrue(t_time >= s_time)
             self.request.page_request_assertionview(data.join_path, DataRequest().successname)
             print('新增请领单成功！！！')
-        except AssertionError:
+        except AssertionError as e:
             self.request.page_request_assertionview(data.join_path, DataRequest().errorname)
             print('新增请领单失败！！！')
+            raise AssertionError(e)
 
     if __name__ == '__main__':
         unittest.main()

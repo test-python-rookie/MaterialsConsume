@@ -41,12 +41,14 @@ class TestOuthouse(unittest.TestCase):
                 self.assertTrue(self.t_time >= self.s_time)
                 self.outhouse.page_outhouse_assertionview(data.join_path, '{}_modify'.format(DataOuthouse().successname))
                 print('审核修改出库单成功！！！')
-            except AssertionError:
+            except AssertionError as e:
                 self.outhouse.page_outhouse_assertionview(data.join_path, '{}_modify'.format(DataOuthouse().errorname))
                 print('审核修改出库单失败！！！')
-        except AssertionError:
+                raise AssertionError(e)
+        except AssertionError as e:
             self.outhouse.page_outhouse_assertionview(data.join_path, '{}_modify'.format(DataOuthouse().errorname))
             print('审核申领单失败！！！')
+            raise AssertionError(e)
 
     # 新建新增测试方法
     @parameterized.expand(get_data())

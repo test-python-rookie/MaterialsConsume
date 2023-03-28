@@ -7,4 +7,4 @@ class DataInhouse:
     # 成功截图名称
     successname = '02_inhouse_success'
     # 失败截图名称
-    errorname = '02_inhouse_error'
+    errorname = '02_inhouse_Fail'
