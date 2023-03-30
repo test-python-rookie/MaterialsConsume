@@ -10,11 +10,11 @@ if __name__ == '__main__':
     for file_name in glob.glob('{}/*'.format(data.join_path)):
         os.remove(file_name)
         # print(file_name)
-    case_login = unittest.defaultTestLoader.discover('./scripts', pattern="test_login.py")
-    case_inhouse = unittest.defaultTestLoader.discover('./scripts', pattern="test_inhouse.py")
-    case_request = unittest.defaultTestLoader.discover('./scripts', pattern="test_request.py")
-    case_agree = unittest.defaultTestLoader.discover('./scripts', pattern="test_agree.py")
-    case_outhouse = unittest.defaultTestLoader.discover('./scripts', pattern="test_outhouse.py")
+    case_login = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_login.py")
+    case_inhouse = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_inhouse.py")
+    case_request = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_request.py")
+    case_agree = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_agree.py")
+    case_outhouse = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_outhouse.py")
     # # 创建套件
     # suit = unittest.TestSuite()
     # # 添加套件用例
