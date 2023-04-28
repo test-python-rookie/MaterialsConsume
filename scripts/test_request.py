@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 
 
 def get_data():
-    return [(DataRequest().wpmc, DataRequest().qlsl)]
+    return [(DataRequest().wpmc1, DataRequest().wpmc2, DataRequest().qlsl)]
 
 class TestRequest(unittest.TestCase):
     # 初始化
@@ -25,9 +25,9 @@ class TestRequest(unittest.TestCase):
 
     # 新建测试方法
     @parameterized.expand(get_data())
-    def test_request(self, wpmc, qlsl):
+    def test_request(self, wpmc1, wpmc2, qlsl):
         # 调用测试方法
-        save_time = self.request.page_request(wpmc, qlsl)
+        save_time = self.request.page_request(wpmc1, wpmc2, qlsl)
         sleep(3)
         # 获取断言
         text_time = self.request.page_request_pass()

@@ -10,7 +10,7 @@ from selenium.webdriver.common.keys import Keys
 
 
 def get_data():
-    return [(DataOuthouse().wpmc, DataOuthouse().cksl)]
+    return [(DataOuthouse().wpmc1, DataOuthouse().wpmc2, DataOuthouse().cksl)]
 
 class TestOuthouse(unittest.TestCase):
     # 初始化
@@ -52,9 +52,9 @@ class TestOuthouse(unittest.TestCase):
 
     # 新建新增测试方法
     @parameterized.expand(get_data())
-    def test_02_couthouse(self, wpmc, cksl):
+    def test_02_couthouse(self, wpmc1, wpmc2, cksl):
         # 调用测试方法
-        self.save_time = self.outhouse.page_couthouse(wpmc, cksl)
+        self.save_time = self.outhouse.page_couthouse(wpmc1, wpmc2, cksl)
         sleep(3)
         # 获取断言
         self.text_time = self.outhouse.page_outhouse_pass()

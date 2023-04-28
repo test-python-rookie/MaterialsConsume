@@ -22,9 +22,21 @@ login_text_num = 0
 inhouse_outhouse = By.CLASS_NAME, 'el-submenu__title'
 inhouse_outhouse_num = 1
 
+# 二级库房管理
+secondary_warehouse = By.CLASS_NAME, 'el-submenu__title'
+secondary_warehouse_num = 6
+
+# 入出库管理的div
+inhouse_outhouse_div = By.CLASS_NAME, 'el-submenu'
+inhouse_outhouse_div_num = 1
+
+# 二级库房管理的div
+secondary_warehouse_div = By.CLASS_NAME, 'el-submenu'
+secondary_warehouse_div_num = 6
+
 # 入库管理
 inhouse = By.CLASS_NAME, 'el-menu-item'
-inhouse_num = 3
+inhouse_num = 0
 
 # 新增入库单按钮
 create_inhouse = By.CLASS_NAME, 'el-button--medium'
@@ -40,7 +52,7 @@ ealing_unit_num = 9
 
 # 业务类型和往来单位下拉选项
 pull_down1 = By.CLASS_NAME, 'el-select-dropdown__list'
-pull_down1_num = 6
+pull_down1_num = 8
 
 pull_down2 = By.CLASS_NAME, 'el-select-dropdown__item'
 pull_down2_num = 1
@@ -48,7 +60,6 @@ pull_down2_num = 1
 # 选择入库物品
 inhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
 inhouse_articles_num = 12
-
 
 # 输入入库数量
 inhouse_quantity = By.CLASS_NAME, 'normal-padding'
@@ -58,9 +69,21 @@ inhouse_quantity_num = 0
 inhouse_today = By.CLASS_NAME, 'normal-padding'
 inhouse_today_num = 7
 
+# 新增第二行数据
+two_inhouse = By.CLASS_NAME, 'el-button--small'
+two_inhouse_num = 0
+
+# 选择第二行入库物品
+two_inhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_inhouse_articles_num = 24
+
+# 输入第二行入库数量
+two_inhouse_quantity = By.CLASS_NAME, 'normal-padding'
+two_inhouse_quantity_num = 11
+
 # 新增入库单确认按钮
 inhouse_confirm1 = By.CLASS_NAME, 'el-button--medium'
-inhouse_confirm1_num = 6
+inhouse_confirm1_num = 9
 
 inhouse_confirm2 = By.CLASS_NAME, 'el-message-box'
 inhouse_confirm2_num = 0
@@ -70,11 +93,11 @@ inhouse_confirm3_num = 0
 
 # 新增入库单保存按钮
 inhouse_save = By.CLASS_NAME, 'el-button--medium'
-inhouse_save_num = 7
+inhouse_save_num = 10
 
 # 新增入库单取消按钮
 inhouse_cancel = By.CLASS_NAME, 'el-button--medium'
-inhouse_cancel_num = 8
+inhouse_cancel_num = 11
 
 # 入库管理列表最新一条数据的录入时间
 inhouse_text1 = By.CLASS_NAME, 'el-table__row'
@@ -85,7 +108,7 @@ inhouse_text2_num = 0
 
 # 请领管理
 request = By.CLASS_NAME, 'el-menu-item'
-request_num = 6
+request_num = 1
 
 # 新增请领单按钮
 create_request = By.CLASS_NAME, 'el-button--medium'
@@ -95,10 +118,21 @@ create_request_num = 2
 request_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
 request_articles_num = 2
 
-
 # 输入请领数量
 request_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
 request_quantity_num = 3
+
+# 新增第二条请领数据
+two_request = By.CLASS_NAME, 'el-button--small'
+two_request_num = 0
+
+# 选择第二条请领物品
+two_request_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_request_articles_num = 4
+
+# 输入第二条请领数量
+two_request_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_request_quantity_num = 5
 
 # 新增请领单确认按钮
 request_confirm1 = By.CLASS_NAME, 'el-button--medium'
@@ -127,15 +161,19 @@ request_text2_num = 0
 
 # 申领管理
 agree = By.CLASS_NAME, 'el-menu-item'
-agree_num = 5
+agree_num = 2
 
 # 修改申领单按钮
 modify_agree = By.CLASS_NAME, 'el-button--mini'
 modify_agree_num = 0
 
-# 输入请领数量
+# 输入申领数量
 agree_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
 agree_quantity_num = 1
+
+# 输入第二条申领数量
+two_agree_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_agree_quantity_num = 2
 
 # 申领单确认按钮
 agree_confirm1 = By.CLASS_NAME, 'el-button--medium'
@@ -168,9 +206,9 @@ agree_text2_num = 7
 
 # 出库管理
 outhouse = By.CLASS_NAME, 'el-menu-item'
-outhouse_num = 4
+outhouse_num = 1
 
-# 新增入库单按钮
+# 新增出库单按钮
 create_outhouse = By.CLASS_NAME, 'el-button--medium'
 create_outhouse_num = 2
 
@@ -202,6 +240,18 @@ outhouse_articles_num = 2
 # 输入入库数量
 outhouse_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
 outhouse_quantity_num = 3
+
+# 新增第二条数据
+two_outhouse = By.CLASS_NAME, 'el-button--small'
+two_outhouse_num = 0
+
+# 选择第二条入库物品
+two_outhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_outhouse_articles_num = 4
+
+# 输入第二条入库数量
+two_outhouse_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_outhouse_quantity_num = 5
 
 # 修改出库单按钮
 modify_outhouse = By.CLASS_NAME, 'el-button--mini'

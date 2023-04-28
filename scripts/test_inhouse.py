@@ -9,7 +9,7 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 
 def get_data():
-    return [(DataInhouse().wpmc, DataInhouse().rksl)]
+    return [(DataInhouse().wpmc1, DataInhouse().wpmc2, DataInhouse().rksl)]
 
 class TestInhouse(unittest.TestCase):
     # 初始化
@@ -24,9 +24,9 @@ class TestInhouse(unittest.TestCase):
 
     # 新建测试方法
     @parameterized.expand(get_data())
-    def test_inhouse(self, wpmc, rksl):
+    def test_inhouse(self, wpmc1, wpmc2, rksl):
         # 调用测试方法
-        save_time = self.inhouse.page_inhouse(wpmc, rksl)
+        save_time = self.inhouse.page_inhouse(wpmc1, wpmc2, rksl)
         sleep(3)
         # 获取断言
         text_time = self.inhouse.page_inhouse_pass()

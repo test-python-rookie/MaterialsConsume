@@ -9,7 +9,7 @@ from time import sleep
 from selenium.webdriver.common.keys import Keys
 
 def get_data():
-    return [(DataAgree().slsl)]
+    return [(DataAgree().slsl1, DataAgree().slsl2)]
 
 class TestAgree(unittest.TestCase):
     # 初始化
@@ -24,9 +24,9 @@ class TestAgree(unittest.TestCase):
 
     # 新建测试方法
     @parameterized.expand(get_data())
-    def test_agree(self, slsl):
+    def test_agree(self, slsl1, slsl2):
         # 调用测试方法
-        save_time = self.agree.page_agree(slsl)
+        save_time = self.agree.page_agree(slsl1, slsl2)
         sleep(3)
         # 获取断言
         text_time = self.agree.page_agree_pass()

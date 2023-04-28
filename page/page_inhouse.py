@@ -28,12 +28,13 @@ class PageInhouse(Base):
     # 点击新增入库单
     def page_inhouse_create(self):
         # 打开入库管理页面
-        self.base_click(page.inhouse, page.inhouse_num)
+        self.base_finds_click(page.inhouse_outhouse_div, page.inhouse_outhouse_div_num, page.inhouse, page.inhouse_num)
+        sleep(1)
         # 点击新增入库单
         self.base_click(page.create_inhouse, page.create_inhouse_num)
 
     # 输入新增数据
-    def page_inhouse_data(self, wpmc, rksl):
+    def page_inhouse_data(self, wpmc1, wpmc2, rksl):
         # 业务类型
         self.base_click(page.business_type, page.business_type_num)
         sleep(1)
@@ -44,14 +45,14 @@ class PageInhouse(Base):
         sleep(1)
         self.base_finds_click(page.pull_down1, page.pull_down1_num, page.pull_down2, page.pull_down2_num)
         # 物品
-        articles = self.base_find_elements(page.inhouse_articles)[page.inhouse_articles_num]
-        self.base_double_click(articles)
+        articles1 = self.base_find_elements(page.inhouse_articles)[page.inhouse_articles_num]
+        self.base_double_click(articles1)
         sleep(1)
-        self.base_active_input(wpmc)
+        self.base_active_input(wpmc1)
         self.base_active_input('Keys.ENTER')
         # 数量
-        quantity = self.base_find_elements(page.inhouse_quantity)[page.inhouse_quantity_num]
-        self.base_double_click(quantity)
+        quantity1 = self.base_find_elements(page.inhouse_quantity)[page.inhouse_quantity_num]
+        self.base_double_click(quantity1)
         sleep(1)
         self.base_active_input(rksl)
         sleep(1)
@@ -60,6 +61,22 @@ class PageInhouse(Base):
         self.base_double_click(today)
         self.base_active_input(time.strftime('%Y-%m-%d'))
         sleep(1)
+        # 点击新增第二行数据
+        self.base_click(page.two_inhouse, page.two_inhouse_num)
+        sleep(1)
+        # 第二行物品
+        articles2 = self.base_find_elements(page.two_inhouse_articles)[page.two_inhouse_articles_num]
+        self.base_double_click(articles2)
+        sleep(1)
+        self.base_active_input(wpmc2)
+        self.base_active_input('Keys.ENTER')
+        # 第二行数量
+        quantity2 = self.base_find_elements(page.two_inhouse_quantity)[page.two_inhouse_quantity_num]
+        self.base_double_click(quantity2)
+        sleep(1)
+        self.base_active_input(rksl)
+        sleep(1)
+        # 获取确认前最新时间
         self.save_time = time.strftime('%Y-%m-%d %H:%M')
         # 入库单确认
         self.base_click(page.inhouse_confirm1, page.inhouse_confirm1_num)
@@ -80,7 +97,7 @@ class PageInhouse(Base):
         self.base_get_image(path, assertionname)
 
     # 组装业务方法
-    def page_inhouse(self, wpmc, rksl):
+    def page_inhouse(self, wpmc1, wpmc2, rksl):
         # self.page_login_user()
         # sleep(1)
         # self.page_login_btn()
@@ -89,5 +106,5 @@ class PageInhouse(Base):
         sleep(1)
         self.page_inhouse_create()
         sleep(1)
-        self.save_time = self.page_inhouse_data(wpmc, rksl)
+        self.save_time = self.page_inhouse_data(wpmc1, wpmc2, rksl)
         return self.save_time

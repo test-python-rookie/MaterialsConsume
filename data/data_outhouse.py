@@ -1,7 +1,8 @@
 # 修改出库单参数
 class DataOuthouse:
     # 物品名称或编号
-    wpmc = '10005'
+    wpmc1 = '10015'
+    wpmc2 = '10016'
     # 出库数量
     cksl = '5'
     # 成功截图名称

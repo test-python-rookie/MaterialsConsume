@@ -28,19 +28,26 @@ class PageAgree(Base):
     # 点击修改审核申领单
     def page_agree_modify(self):
         # 打开申领管理页面
-        self.base_click(page.agree, page.agree_num)
+        self.base_finds_click(page.inhouse_outhouse_div, page.inhouse_outhouse_div_num, page.agree, page.agree_num)
         sleep(1)
         # 点击修改申领单
         self.base_click(page.modify_agree, page.modify_agree_num)
 
     # 修改申领数据
-    def page_agree_data(self, slsl):
+    def page_agree_data(self, slsl1, slsl2):
         # 数量
-        quantity = self.base_find_elements(page.agree_quantity)[page.agree_quantity_num]
-        self.base_double_click(quantity)
+        quantity1 = self.base_find_elements(page.agree_quantity)[page.agree_quantity_num]
+        self.base_double_click(quantity1)
         sleep(1)
-        self.base_active_input(slsl)
+        self.base_active_input(slsl1)
         sleep(1)
+        # 第二条数量
+        quantity2 = self.base_find_elements(page.two_agree_quantity)[page.two_agree_quantity_num]
+        self.base_double_click(quantity2)
+        sleep(1)
+        self.base_active_input(slsl2)
+        sleep(1)
+        # 申请单确认前最新时间
         self.save_time = time.strftime('%Y-%m-%d %H:%M')
         # 申领单确认
         self.base_click(page.agree_confirm1, page.agree_confirm1_num)
@@ -64,14 +71,14 @@ class PageAgree(Base):
         self.base_get_image(path, assertionname)
 
     # 组装业务方法
-    def page_agree(self, slsl):
+    def page_agree(self, slsl1, slsl2):
         # self.page_login_user()
         # sleep(1)
         # self.page_login_btn()
         # sleep(3)
-        # self.page_open_inhouse_outhouse()
-        # sleep(1)
+        self.page_open_inhouse_outhouse()
+        sleep(1)
         self.page_agree_modify()
         sleep(2)
-        self.save_time = self.page_agree_data(slsl)
+        self.save_time = self.page_agree_data(slsl1, slsl2)
         return self.save_time
