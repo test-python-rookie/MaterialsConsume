@@ -49,6 +49,7 @@ class PageInhouse(Base):
         self.base_double_click(articles1)
         sleep(1)
         self.base_active_input(wpmc1)
+        sleep(1)
         self.base_active_input('Keys.ENTER')
         # 数量
         quantity1 = self.base_find_elements(page.inhouse_quantity)[page.inhouse_quantity_num]
@@ -69,6 +70,7 @@ class PageInhouse(Base):
         self.base_double_click(articles2)
         sleep(1)
         self.base_active_input(wpmc2)
+        sleep(1)
         self.base_active_input('Keys.ENTER')
         # 第二行数量
         quantity2 = self.base_find_elements(page.two_inhouse_quantity)[page.two_inhouse_quantity_num]

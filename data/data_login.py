@@ -1,7 +1,7 @@
 # 登录参数
 class DataLogin:
     # 账号
-    username = 'qltest'
+    username = 'wmadmin'
     # 密码
     password = ('123456', '1234')
     # 断言比较

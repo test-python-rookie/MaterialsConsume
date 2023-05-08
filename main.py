@@ -15,6 +15,8 @@ if __name__ == '__main__':
     case_request = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_request.py")
     case_agree = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_agree.py")
     case_outhouse = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_outhouse.py")
+    case_departmentplan = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_departmentplan.py")
+    case_planaudit = unittest.defaultTestLoader.discover(data.scripts_path, pattern="test_planaudit.py")
     # # 创建套件
     # suit = unittest.TestSuite()
     # # 添加套件用例
@@ -37,6 +39,8 @@ if __name__ == '__main__':
         suit.addTest(case_request)
         suit.addTest(case_agree)
         suit.addTest(case_outhouse)
+        suit.addTest(case_departmentplan)
+        suit.addTest(case_planaudit)
         runner = HTMLTestRunner.HTMLTestRunner(stream=f, title='',description='',verbosity=2)
         runner.run(suit)
 

@@ -55,11 +55,11 @@ pull_down1 = By.CLASS_NAME, 'el-select-dropdown__list'
 pull_down1_num = 8
 
 pull_down2 = By.CLASS_NAME, 'el-select-dropdown__item'
-pull_down2_num = 1
+pull_down2_num = 0
 
 # 选择入库物品
 inhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
-inhouse_articles_num = 12
+inhouse_articles_num = 9
 
 # 输入入库数量
 inhouse_quantity = By.CLASS_NAME, 'normal-padding'
@@ -67,7 +67,7 @@ inhouse_quantity_num = 0
 
 # 输入有效期
 inhouse_today = By.CLASS_NAME, 'normal-padding'
-inhouse_today_num = 7
+inhouse_today_num = 4
 
 # 新增第二行数据
 two_inhouse = By.CLASS_NAME, 'el-button--small'
@@ -75,11 +75,11 @@ two_inhouse_num = 0
 
 # 选择第二行入库物品
 two_inhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
-two_inhouse_articles_num = 24
+two_inhouse_articles_num = 18
 
 # 输入第二行入库数量
 two_inhouse_quantity = By.CLASS_NAME, 'normal-padding'
-two_inhouse_quantity_num = 11
+two_inhouse_quantity_num = 8
 
 # 新增入库单确认按钮
 inhouse_confirm1 = By.CLASS_NAME, 'el-button--medium'
@@ -231,7 +231,7 @@ outhouse_pull_down1 = By.CLASS_NAME, 'el-select-dropdown__list'
 outhouse_pull_down1_num = 7
 
 outhouse_pull_down2 = By.CLASS_NAME, 'el-select-dropdown__item'
-outhouse_pull_down2_num = 1
+outhouse_pull_down2_num = 0
 
 # 选择入库物品
 outhouse_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
@@ -281,3 +281,100 @@ outhouse_text1_num = 0
 
 outhouse_text2 = By.CLASS_NAME, 'el-tooltip'
 outhouse_text2_num = 8
+
+# 科室采购计划
+departmentplan = By.CLASS_NAME, 'el-menu-item'
+departmentplan_num = 0
+
+# 新增科室采购计划单按钮
+departmentplan_create = By.CLASS_NAME, 'el-button--medium'
+departmentplan_create_num = 2
+
+# 选择科室计划物品
+departmentplan_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+departmentplan_articles_num = 4
+
+# 输入科室计划数量
+departmentplan_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+departmentplan_quantity_num = 6
+
+# 输入科室计划进货价
+departmentplan_price = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+departmentplan_price_num = 7
+
+# 新增第二条科室计划数据
+two_departmentplan = By.CLASS_NAME, 'el-button--small'
+two_departmentplan_num = 0
+
+# 选择第二条科室计划物品
+two_departmentplan_articles = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_departmentplan_articles_num = 8
+
+# 输入第二条科室计划数量
+two_departmentplan_quantity = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_departmentplan_quantity_num = 10
+
+# 输入第二条科室计划进货价
+two_departmentplan_price = By.CLASS_NAME, 'tbaleInputSkipToNextOne'
+two_departmentplan_price_num = 11
+
+# 新增科室计划单确认按钮
+departmentplan_confirm1 = By.CLASS_NAME, 'el-button--medium'
+departmentplan_confirm1_num = 6
+
+departmentplan_confirm2 = By.CLASS_NAME, 'el-message-box'
+departmentplan_confirm2_num = 0
+
+departmentplan_confirm3 = By.CLASS_NAME, 'el-button--primary'
+departmentplan_confirm3_num = 0
+
+# 新增科室计划单保存按钮
+departmentplan_save = By.CLASS_NAME, 'el-button--medium'
+departmentplan_save_num = 7
+
+# 新增科室计划单取消按钮
+departmentplan_cancel = By.CLASS_NAME, 'el-button--medium'
+departmentplan_cancel_num = 8
+
+# 科室采购计划列表最新一条数据的制单时间
+departmentplan_text1 = By.CLASS_NAME, 'el-table__row'
+departmentplan_text1_num = 0
+
+departmentplan_text2 = By.CLASS_NAME, 'el-tooltip'
+departmentplan_text2_num = 0
+
+# 采购管理
+purchase = By.CLASS_NAME, 'el-submenu__title'
+purchase_num = 0
+
+# 采购管理的div
+purchase_div = By.CLASS_NAME, 'el-submenu'
+purchase_div_num = 0
+
+# 计划审计
+planaudit = By.CLASS_NAME, 'el-menu-item'
+planaudit_num = 1
+
+# 确认日期
+confirm_date = By.CLASS_NAME, 'el-radio__inner'
+confirm_date_num = 1
+
+# 搜索
+planaudit_search = By.CLASS_NAME, 'el-button--medium'
+planaudit_search_num = 0
+
+# 第一条数据审计
+planaudit_audit1 = By.CLASS_NAME, 'el-table__row'
+planaudit_audit1_num = 0
+
+planaudit_audit2 = By.CLASS_NAME, 'el-button--mini'
+planaudit_audit2_num = 1
+
+# 审计确认
+planaudit_confirm1 = By.CLASS_NAME, 'el-button--medium'
+planaudit_confirm1_num = 4
+
+# 获取计划单确认状态
+planaudit_type = By.CLASS_NAME, 'el-tooltip'
+planaudit_type_num = 2
+

@@ -20,10 +20,10 @@ class TestOuthouse(unittest.TestCase):
         cls.outhouse = PageOuthouse(GetDriver().get_driver())
 
     # 结束方法
-    @classmethod
-    def tearDownClass(cls):
-        # 关闭浏览器
-        GetDriver().quit_driver()
+    # @classmethod
+    # def tearDownClass(cls):
+    #     # 关闭浏览器
+    #     GetDriver().quit_driver()
 
     # 新建修改测试方法
     # @parameterized.expand(get_data())

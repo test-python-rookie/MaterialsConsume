@@ -71,6 +71,7 @@ class PageOuthouse(Base):
         self.base_double_click(articles1)
         sleep(1)
         self.base_active_input(wpmc1)
+        sleep(1)
         self.base_active_input('Keys.ENTER')
         # 数量
         quantity1 = self.base_find_elements(page.outhouse_quantity)[page.outhouse_quantity_num]
@@ -85,6 +86,7 @@ class PageOuthouse(Base):
         self.base_double_click(articles2)
         sleep(1)
         self.base_active_input(wpmc2)
+        sleep(1)
         self.base_active_input('Keys.ENTER')
         # 第二条数量
         quantity2 = self.base_find_elements(page.two_outhouse_quantity)[page.two_outhouse_quantity_num]
